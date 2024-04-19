@@ -9,18 +9,23 @@
 }
 
 h1{
-    position: absolute;
-    top: 250px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    position: relative;
+    text-align: center;
+    top: 300px;
 }
 
 body{
+    background-image: linear-gradient(120deg,#00ABBD, #026E81, #0099DD);
+}
+
+main{
     height: 100vh;
     background-image: linear-gradient(120deg,#00ABBD, #026E81, #0099DD);
     align-items: center;
     display: flex;
     justify-content: center;
+    max-width: 1900px;
+    min-width: 400px;
 }
 
 .relogio{
@@ -55,4 +60,20 @@ body{
 
 .relogio span.tempo{
     font-size: 10px;
+}
+
+@media screen and (max-width: 760px) {
+    h1{
+        position: relative;
+        top: 200px;
+    }
+
+    .relogio{
+        width: 380px;
+        margin-right: 10px;
+    }
+
+    .relogio div{
+        width: 108px;
+    }
 }
